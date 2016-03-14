@@ -9,11 +9,15 @@ class SearchBar extends Component {
 
   render() {
     return (
-      <div>
-        <input
-          value={this.state.searchTerm}
-          onChange={event => this.onInputChange(event.target.value)} />
-      </div>
+      <form>
+        <fieldset className="form-group">
+          <input
+            className="form-control"
+            value={this.state.searchTerm}
+            placeholder="Search for Youtube Videos"
+            onChange={event => this.onInputChange(event.target.value)} />
+        </fieldset>
+      </form>
     );
   }
 
